@@ -11,7 +11,7 @@ MeshQuad::MeshQuad():
 
 void MeshQuad::gl_init()
 {
-	m_shader_flat = new ShaderProgramFlat();
+    m_shader_flat = new ShaderProgramFlat();
 	m_shader_color = new ShaderProgramColor();
 
 	//VBO
@@ -389,7 +389,7 @@ int MeshQuad::intersected_visible(const Vec3& P, const Vec3& Dir)
             if (distance < 0)
             {
                 Vec3 ecart(ptInter - P);    // nouvelle distance P - inter
-                float norme = sqrt(ecart.x*ecart.x + ecart.y+ecart.y + ecart.z*ecart.z);
+                float norme = vec_length(ecart);
                 distance = norme;
                 inter = i;  // nouvelle plus proche intersection
                 qDebug() << "distance (<0) : " << distance;
@@ -397,7 +397,7 @@ int MeshQuad::intersected_visible(const Vec3& P, const Vec3& Dir)
             else
             {
                 Vec3 ecart(ptInter - P);    // nouvelle distance P - inter
-                float norme = sqrt(ecart.x*ecart.x + ecart.y+ecart.y + ecart.z*ecart.z);
+                float norme = vec_length(ecart);
 
                 if (norme > distance)
                 {

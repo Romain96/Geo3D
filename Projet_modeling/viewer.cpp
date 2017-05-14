@@ -125,7 +125,7 @@ void Viewer::keyPressEvent(QKeyEvent *event)
             else
             {
                 qDebug() << "décalage positif du quad : " << m_selected_quad;
-                m_mesh.decale_quad(m_selected_quad, 1.0f);
+                m_mesh.decale_quad(m_selected_quad, 0.5f);
                 break;
             }
 
@@ -139,7 +139,7 @@ void Viewer::keyPressEvent(QKeyEvent *event)
             else
             {
                 qDebug() << "décalage négatif du quad : " << m_selected_quad;
-                m_mesh.decale_quad(m_selected_quad, -1.0f);
+                m_mesh.decale_quad(m_selected_quad, -0.5f);
                 break;
             }
 
@@ -156,7 +156,7 @@ void Viewer::keyPressEvent(QKeyEvent *event)
                 else
                 {
                     qDebug() << "homotétie du quad (agrandissement): " << m_selected_quad;
-                    m_mesh.shrink_quad(m_selected_quad, 1.5f);
+                    m_mesh.shrink_quad(m_selected_quad, 1.25f);
                     break;
                 }
             }
@@ -170,7 +170,7 @@ void Viewer::keyPressEvent(QKeyEvent *event)
                 else
                 {
                     qDebug() << "homotétie du quad (réduction): " << m_selected_quad;
-                    m_mesh.shrink_quad(m_selected_quad, 0.5f);
+                    m_mesh.shrink_quad(m_selected_quad, 0.75f);
                     break;
                 }
             }
@@ -203,7 +203,7 @@ void Viewer::keyPressEvent(QKeyEvent *event)
                 else
                 {
                     qDebug() << "rotation (sens anti horaire) du quad : " << m_selected_quad;
-                    m_mesh.tourne_quad(m_selected_quad, -10.0f*M_PI/180.0f);
+                    m_mesh.tourne_quad(m_selected_quad, 350.0f*M_PI/180.0f);
                     break;
                 }
             }
