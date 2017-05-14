@@ -17,6 +17,7 @@ Ce répertoire regroupe le travail effectué dans le cadre de l'UE
 * sous-répertoire "Projet_modeling"
 voir le sujet du TP
 
+* sous-répertoire "screenshot" pour quelques exemples de réalisations :)
 ## Auteur ##
 
 Romain PERRIN (Romain96)
